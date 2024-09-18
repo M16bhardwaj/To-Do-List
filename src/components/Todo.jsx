@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import todo_icon from '../assets/todo_icon.png'
 import Todoitems from './Todoitems'
 
@@ -21,7 +21,7 @@ const add=()=>{
     text:inputText,
     isComplete:false,
   }
-  
+
   setTodoList((prev)=>[...prev, newTodo]);
   inputRef.current.value="";
 }
@@ -33,7 +33,7 @@ const add=()=>{
 
      <div className='flex items-center mt-7 gap-2'>
         <img className='w-8' src={todo_icon} alt="" />
-        <h1 className='text-3xl font-semibold'>To-Do List</h1>
+        <h1 className='text-3xl font-semibold'>Mukul-To-Do List</h1>
      </div>
 
        {/*--input-box--*/}
