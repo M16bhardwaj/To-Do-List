@@ -26,6 +26,7 @@ const add=()=>{
   inputRef.current.value="";
 }
     const deleteTodo=(id)=>{
+      console.log(id);
       setTodoList((prvTodos)=>{
         return prvTodos.filter((todo)=>todo.id !==id)
       })
@@ -53,7 +54,7 @@ const add=()=>{
 
        <div>
       {todoList.map((item,index)=>{
-        return <Todoitems key={index} text={item.text} id={item.text} isComplete={item.isComplete} deleteTodo={deleteTodo}/>
+        return <Todoitems key={index} text={item.text} id={item.id} isComplete={item.isComplete} deleteTodo={deleteTodo}/>
       })}
        </div>
 
